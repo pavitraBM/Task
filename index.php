@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 
-include('includes/dbconnection.php');
+//include('includes/dbconnection.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -111,20 +111,10 @@ include('includes/dbconnection.php');
 				<h3 class="tittle">About Us</h3>
 			</div>
 			<div class="inner_sec_grids_info_w3ls">
-				<?php
-$sql="SELECT * from tblpage where PageType='aboutus'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+				
 				<div class="col-md-6 banner_bottom_left">
 					<h4>Employment opportunities for <span>Professionals</span></h4>
-					<p><?php  echo htmlentities($row->PageDescription);?></p><?php $cnt=$cnt+1;}} ?>
+					<p><---</p>
 			
 					<div class="clearfix"> </div>
 				</div>
